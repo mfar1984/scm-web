@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+
+  // Limit build workers: the cPanel host reports 128 CPUs and one worker
+  // per CPU gets `next build` killed by the account memory limit.
+  experimental: {
+    cpus: 1,
+  },
   
   // CORS headers for all routes
   async headers() {
