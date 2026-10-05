@@ -1,0 +1,143 @@
+export type ServiceData = {
+  slug: string;
+  number: string;
+  title: string;
+  image: string;
+  icon: string;
+  parentLabel: string;   // for breadcrumb + back link
+  parentHref: string;
+  tag: string;
+  intro: string;
+  offerings: string[];
+};
+
+export const services: Record<string, ServiceData> = {
+  'survey-inspection': {
+    slug: 'survey-inspection',
+    number: '01',
+    title: 'Survey & Inspection',
+    image: '/image/survey-inspection-min.png',
+    icon: 'bi-clipboard-check',
+    parentLabel: 'Classification Services',
+    parentHref: '/services/classification',
+    tag: 'Classification Services',
+    intro: 'SCM conducts comprehensive classification and statutory surveys on vessels throughout their entire lifecycle — from class entry to periodic and occasional surveys — ensuring continued compliance with SCM Rules and international maritime conventions.',
+    offerings: [
+      'Class Entry',
+      'Ship in Operation Surveys: Annual, Intermediate, Renewal',
+      'Statutory Surveys: SOLAS, MARPOL, COLREG',
+      'Cargo Ship Safety Equipment',
+      'Cargo Ship Safety Construction',
+      'Cargo Ship Safety Radio',
+      'International Load Line 1966 Convention',
+      'International Tonnage 1969 Convention',
+      'International Oil Pollution Prevention (IOPP)',
+      'International Air Pollution Prevention (IAPP)',
+      'Carriage of Dangerous Goods in Packaged Form (IMDG Code)',
+      'Boiler Survey',
+      'Dry-docking Survey',
+      'In-water Survey',
+      'Damage & Repair Survey',
+      'Laid Up / Lay-up Survey',
+      'Carving & Marking',
+      'Special Purpose Ship',
+      'Fishing Vessel',
+      'Condition Assessment: Pre-purchase, Valuation, On Hire',
+    ],
+  },
+  'plan-approval': {
+    slug: 'plan-approval',
+    number: '02',
+    title: 'Plan Approval & Newbuilding',
+    image: '/image/Plan-Approval-Newbuilding-min.png',
+    icon: 'bi-rulers',
+    parentLabel: 'Classification Services',
+    parentHref: '/services/classification',
+    tag: 'Classification Services',
+    intro: 'Our technical team reviews and approves ship designs and supervises newbuilding construction — verifying structural integrity, stability and regulatory compliance from the drawing board through to vessel delivery.',
+    offerings: [
+      'Newbuilding Construction, Hull Compliance & Ship Construction Supervision / Owner\u2019s Representative',
+      'Drawings Approval',
+      'Tonnage and Load Line Calculations',
+      'Modification',
+      'Inclining / Lightship',
+      'EEDI, EEXI Verification',
+      'SEEMP Verification',
+      'IBWM Compliance and Certification',
+      'Passenger Evacuation Analysis',
+      'Damage Stability Assessment',
+      'SOLAS Probabilistic Analysis',
+      'Safety Plan Approval',
+    ],
+  },
+  'certification': {
+    slug: 'certification',
+    number: '03',
+    title: 'Audit & Certification',
+    image: '/image/certification-min-1.png',
+    icon: 'bi-patch-check',
+    parentLabel: 'Certification Services',
+    parentHref: '/services/certification',
+    tag: 'Certification Services',
+    intro: 'SCM issues classification and statutory certifications for vessels, components and marine equipment — backed by rigorous audits and internationally recognised standards.',
+    offerings: [
+      'Class Certification',
+      'Component Certification',
+      'Bollard Pull',
+      'Towing',
+      'Condition Assessment',
+      'Main Switch Board',
+      'Tailshaft',
+      'Propeller',
+      'Watertight Door',
+      'Marine Glass Panels',
+      'Welding Procedures Specification',
+      'Welders Qualification Test & Certificate',
+      'International Safety Management (ISM) Code',
+      'International Ship and Port Facility Security (ISPS) Code',
+      'Maritime Labour Convention (MLC), 2006 \u2013 ILO',
+    ],
+  },
+  'audit-certification': {
+    slug: 'audit-certification',
+    number: '04',
+    title: 'Statutory Audit',
+    image: '/image/Statutory-Audit.png',
+    icon: 'bi-shield-check',
+    parentLabel: 'Classification Services',
+    parentHref: '/services/classification',
+    tag: 'Classification Services',
+    intro: 'We perform statutory and security audits on behalf of flag administrations and operators — verifying compliance with ISM, ISPS, MLC and marine facility security requirements.',
+    offerings: [
+      'International Safety Management (ISM) Audit',
+      'International Ship and Port Facility Security (ISPS) Audit',
+      'MLC & ILO Inspection',
+      'Vendor Audit',
+      'Marine Facility Security Assessment (MFSA)',
+      'Marine Facility Security Plan (MFSP)',
+    ],
+  },
+  'consultancy': {
+    slug: 'consultancy',
+    number: '05',
+    title: 'Consultancy & Advisory',
+    image: '/image/consultancy-min.png',
+    icon: 'bi-lightbulb',
+    parentLabel: 'Consultancy & Advisory',
+    parentHref: '/services/consultancy',
+    tag: 'Consultancy & Advisory',
+    intro: 'Beyond classification, SCM provides independent technical consultancy and advisory services — from condition assessments and pre-purchase surveys to project management and repair supervision.',
+    offerings: [
+      'Non-Classification (On/Off Hire, Condition Assessment including Suitability Survey, Pre-Purchase Survey and Damage Survey)',
+      'Ship Conversion and Modification',
+      'Newbuilding Technical Specification Review',
+      'Project Management (Owner\u2019s Representative)',
+      'Condition Survey of Marine Structures',
+      'Damage Assessment and Repair Supervision',
+      'Ship Condition Assessment Program (CAP)',
+      'Plan Maintenance System',
+    ],
+  },
+};
+
+export const serviceList = Object.values(services);
